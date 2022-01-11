@@ -19,9 +19,7 @@ resource "aws_vpc" "main" {
   }
 }
 
-data "aws_availability_zones" "available" {
-  state = "available"
-}
+data "aws_availability_zones" "available" {}
 
 resource "aws_subnet" "public-subnet-a" {
   vpc_id            = aws_vpc.main.id
